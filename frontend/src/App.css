@@ -1,0 +1,111 @@
+import React, { useState } from 'react';
+
+export default function App() {
+  const [count, setCount] = useState<number>(0);
+
+  return (
+    <div id="center">
+      {/* Hero 3D Graphic Section */}
+      <div className="hero">
+        <img
+          src="https://vitejs.dev/logo.svg"
+          alt="Vite Base Logo"
+          className="base"
+        />
+        <img
+          src="https://reactjs.org/logo-og.png"
+          alt="Framework Logo"
+          className="framework"
+        />
+        <img
+          src="https://vitejs.dev/logo.svg"
+          alt="Vite Logo Overlay"
+          className="vite"
+        />
+      </div>
+
+      <h1>Vite + React</h1>
+
+      {/* Counter Button */}
+      <button 
+        className="counter" 
+        onClick={() => setCount((prev) => prev + 1)}
+      >
+        count is {count}
+      </button>
+
+      {/* Decorative Ticks Divider */}
+      <div className="ticks"></div>
+
+      {/* Next Steps Section */}
+      <div id="next-steps">
+        <div id="docs">
+          <svg
+            className="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            />
+          </svg>
+          <h2>Documentation</h2>
+          <p>Explore the Vite and React documentation to learn more about frontend development.</p>
+
+          <ul>
+            <li>
+              <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+                <img src="https://vitejs.dev/logo.svg" alt="Vite" className="logo button-icon" />
+                Vite Docs
+              </a>
+            </li>
+            <li>
+              <a href="https://react.dev" target="_blank" rel="noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" className="logo button-icon" />
+                React Docs
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <svg
+            className="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 10V3L4 14h7v7l9-11h-7z"
+            />
+          </svg>
+          <h2>Next Steps</h2>
+          <p>Edit <code>src/App.tsx</code> and save to test HMR (Hot Module Replacement).</p>
+
+          <ul>
+            <li>
+              <a href="https://github.com" target="_blank" rel="noreferrer">
+                <svg className="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Spacer */}
+      <div id="spacer"></div>
+    </div>
+  );
+}
